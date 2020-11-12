@@ -42,8 +42,8 @@ del1 = [1.15 1.15 1.15];
 del2 = [0.85 0.85 0.85];
 del3 = [0.15 0.15 0.15];
 
-x = -26:26;
-stem(x,FIR_BandStop,'.')
+x1 = -26:26;
+stem(x1,FIR_BandStop,'.')
 xlabel('n');
 ylabel('h[n]');
 xlim([-35,35]);
@@ -51,6 +51,6 @@ title('Time Domain Sequence');
 
 %magnitude response
 [H,f] = freqz(FIR_BandStop,1,1024, f_samp);
-plot(f,abs(H),'b',sl,y,pl,y,ph,y,sh,y,x,del1,x,del2,x,del3)
+plot(f,abs(H),'b',sl,y,pl,y,ph,y,sh,y,x,del1,x,del2,x,del3);
 xlim([0, 13e4]);
 grid
