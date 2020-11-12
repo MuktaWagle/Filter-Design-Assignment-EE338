@@ -44,14 +44,13 @@ del2 = [0.85 0.85 0.85];
 del3 = [0.15 0.15 0.15];
 
 x = -31:31;
-stem(x,FIR_BandPass,'.')
+stem(x,FIR_BandPass,'.') %time domain sequence plot
 xlabel('n');
 ylabel('h[n]');
 xlim([-35,35]);
-title('Time Domain Sequence');
+title('Time Domain Sequence'); 
 
 %magnitude response
 [H,f] = freqz(FIR_BandPass,1,1024, f_samp);
-%stem(f,abs(H))
 grid on
 grid minor
